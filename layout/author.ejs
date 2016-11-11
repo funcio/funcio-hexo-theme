@@ -1,0 +1,13 @@
+<div class="container">
+
+	<div class="row">
+		<div class="col-sm-4">
+			<img src="<%=page.author.photo%>" alt ="photo">
+		</div>
+		<div class="col-sm-8">
+			<h1><%= page.author.name %></h1>
+			<%- markdown(page.author.bio) %>
+		</div>
+	</div>
+</div>
+<%- partial('_partial/archive', {pagination: 2, index: true}) %>

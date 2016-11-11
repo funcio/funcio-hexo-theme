@@ -5,9 +5,12 @@
   </header>
 
   <div class="article-meta">
+    <% if (post.author){ %><div class="article-author">
+      <a href="<%- config.root %><%- 'author/' + post.authorId %>"><%= post.author.name %></a>
+    </div><% } %>
     <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-    <% if (post.author){ %><div class="article-author"><%= post.author %></div><% } %>
     <%- partial('post/category') %>
+    <%- partial('post/tag') %>
   </div>
   <div class="article-inner">
 
@@ -37,7 +40,6 @@
           <i class="fa fa-comment"></i> Comments
         </a>
       <% } %>
-      <%- partial('post/tag') %>
     </footer>
   </div>
   <% if (!index){ %>
