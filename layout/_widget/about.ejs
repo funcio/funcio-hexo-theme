@@ -2,7 +2,10 @@
   <a href="/">
     <img src='/img/logofuncionotes.png'/>
     <h2>Funció</h2> 
-    <h4>/ˈfun’sió/</h4>
-  	<%- theme.about_widget_content %>
   </a>
+  <h4>/ˈfun’sió/</h4>
+  <%- theme.about_widget_content %>
+  <% if (theme.subtitle){ %>
+    <h5><%= theme.subtitle %></h5>
+  <% } %>
 </div>
